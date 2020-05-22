@@ -3,16 +3,21 @@ import VueRouter from 'vue-router'
 import Login from '../components/Login.vue'
 import Home from '../components/Home.vue'
 import Welcome from '../components/Welcome.vue'
-import Users from '../components/user/Users.vue'
+import Users from '../components/users/Users.vue'
 import Rights from '../components/rights/Rights.vue'
 import Roles from '../components/rights/Roles.vue'
+import Cate from '../components/goods/Cate.vue'
+import Goods from '../components/goods/Goods.vue'
+import Params from '../components/goods/Params.vue'
+import Orders from '../components/orders/Orders.vue'
+import Reports from '../components/reports/Reports.vue'
 
 Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes: [{
     path: '/',
-    redirect: '/login'
+    redirect: '/home'
   }, {
     path: '/login',
     component: Login
@@ -32,6 +37,21 @@ const router = new VueRouter({
     }, {
       path: '/roles',
       component: Roles
+    }, {
+      path: '/categories',
+      component: Cate
+    }, {
+      path: '/goods',
+      component: Goods
+    }, {
+      path: '/params',
+      component: Params
+    }, {
+      path: '/orders',
+      component: Orders
+    }, {
+      path: '/reports',
+      component: Reports
     }]
   }]
 })
