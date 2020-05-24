@@ -63,7 +63,7 @@
     </el-card>
     <!-- 添加用户的对话框 -->
     <el-dialog title="添加用户" :visible.sync="addDialogVisible" width="50%" @close="addDialogClosed">
-      <el-form :model="addForm" :rules="formRules" ref="addFormRef" label-width="70px">
+      <el-form :model="addForm" :rules="usersRules" ref="addFormRef" label-width="70px">
         <el-form-item label="用户名" prop="username">
           <el-input v-model="addForm.username"></el-input>
         </el-form-item>
@@ -89,7 +89,7 @@
       width="50%"
       @close="editDialogClosed"
     >
-      <el-form :model="editForm" :rules="formRules" ref="editFormRef" label-width="70px">
+      <el-form :model="editForm" :rules="usersRules" ref="editFormRef" label-width="70px">
         <el-form-item label="用户名" prop="username">
           <el-input v-model="editForm.username" disabled></el-input>
         </el-form-item>
@@ -161,7 +161,7 @@ export default {
         email: '',
         mobile: ''
       },
-      formRules: {
+      usersRules: {
         username: [
           { required: true, message: '请输入用户名', trigger: 'blur' },
           { min: 5, max: 10, message: '长度在 5 到 10 个字符', trigger: 'blur' }
