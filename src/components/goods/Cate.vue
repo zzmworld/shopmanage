@@ -245,13 +245,11 @@ export default {
           type: 'warning'
         }
       ).catch(err => err)
-
       if (confirmResult !== 'confirm') {
         return this.$message.info('已取消删除')
       }
       const { data: res } = await this.$http.delete('categories/' + id)
       if (res.meta.status !== 200) {
-        console.log(res.meta.status)
         return this.$message.error('删除分类失败')
       }
       this.$message.success('删除分类成功')

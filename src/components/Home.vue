@@ -107,7 +107,4 @@ export default {
   }
 }
 
-.el-main {
-  text-align: center;
-}
 </style>

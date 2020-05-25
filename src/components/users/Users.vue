@@ -8,12 +8,12 @@
 
     <el-card>
       <el-row :gutter="20">
-        <el-col :span="16">
+        <el-col :span="10">
           <el-input placeholder="请输入内容" v-model="queryInfo.query" clearable @clear="getUserList">
             <el-button slot="append" icon="el-icon-search" @click="getUserList"></el-button>
           </el-input>
         </el-col>
-        <el-col :span="4">
+        <el-col :span="5">
           <el-button type="primary" @click="addDialogVisible = true">添加用户</el-button>
         </el-col>
       </el-row>
