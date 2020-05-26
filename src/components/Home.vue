@@ -11,7 +11,7 @@
     <!-- 主体 -->
     <el-container>
       <!-- 侧边栏 -->
-      <el-aside width="200px">
+      <el-aside width="180px">
         <!-- 菜单 -->
         <el-menu text-color="#777" active-text-color="#409eff" unique-opened router :default-active="activePath">
           <!-- 一级菜单 -->
@@ -21,7 +21,7 @@
             :key="item.id"
           >
             <template slot="title">
-              <span>{{ item.authName }}</span>
+              <span><h3>{{ item.authName }}</h3></span>
             </template>
             <!-- 二级菜单 -->
             <el-menu-item
