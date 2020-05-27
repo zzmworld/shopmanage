@@ -148,7 +148,7 @@
     </el-dialog>
     <!-- 修改对话框 -->
     <el-dialog
-      title="添加参数/属性"
+      title="修改参数/属性"
       :visible.sync="editDialogVisible"
       width="width"
       @close="editDialogClosed"
